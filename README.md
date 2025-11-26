@@ -54,16 +54,3 @@ unstakeTokens() – Withdraw staked Tether
 issueTokens() – Issue RWD rewards (only owner can call)
 
 Only the contract owner may issue rewards, ensuring access control.
-
-4. migrations.sol
-
-Used by Truffle to track and manage deployments
-src/
- ├── contracts/
- │     ├── Tether.sol
- │     ├── RWD.sol
- │     ├── DecentralBank.sol
- │     └── migrations.sol
- └── truffle_abis/
-       └── ABI JSON files generated after compilation
-
