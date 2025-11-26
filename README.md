@@ -7,3 +7,63 @@ Stake Your Tokens: Put your tokens to work with just a few clicks.
 Earn Rewards: Watch your rewards grow in real time as the app calculates them automatically.
 Withdraw Anytime: You can withdraw your tokens and rewards whenever you want. No lock-ins, no hassles.
 Secure and Decentralized: Built on blockchain technology, your assets are safe, and every transaction is fully transparent.
+1. Tether.sol
+
+A mock USDT ERC-20 token used as the staking currency.
+
+Key Features:
+
+Standard ERC-20 implementation
+
+Mintable token supply
+
+Users use this token to stake in the system
+
+2. RWD.sol
+
+Reward token issued to users for staking.
+
+Key Features:
+
+ERC-20 token
+
+Minted only by the DecentralBank contract
+
+Acts as the reward for stakers
+
+3. DecentralBank.sol
+
+This is the main contract that handles staking logic.
+
+Responsibilities:
+
+Accepting Tether deposits
+
+Tracking staking balances
+
+Issuing RWD tokens as rewards
+
+Allowing users to withdraw their staked tokens
+
+Important Functions:
+
+depositTokens(uint _amount) – Stake Tether
+
+unstakeTokens() – Withdraw staked Tether
+
+issueTokens() – Issue RWD rewards (only owner can call)
+
+Only the contract owner may issue rewards, ensuring access control.
+
+4. migrations.sol
+
+Used by Truffle to track and manage deployments
+src/
+ ├── contracts/
+ │     ├── Tether.sol
+ │     ├── RWD.sol
+ │     ├── DecentralBank.sol
+ │     └── migrations.sol
+ └── truffle_abis/
+       └── ABI JSON files generated after compilation
+
